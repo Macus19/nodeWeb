@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            padding: 50px;
+            font: 14px
+        }
+
+        a {
+            color: #00B7FF
+        }
+
+        .photo {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px #ddd;
+        }
+
+        .photo h2 {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 200;
+        }
+
+        .photo img {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo</h1>
+    <p>Express stock photo application.</p>
+    <div id="photos">
+        <% photos.forEach(function(photo){ %>
+        <div class="photo">
+            <h2><%= photo.name %></h2>
+            <img src='<%= photo.path %>' />
+        </div>
+        <% }) %>
+    </div>
+
+</body>
+
+</html>
